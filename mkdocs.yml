@@ -1,0 +1,60 @@
+# Project information
+site_name: yosoyfunes tools
+site_description: tools
+site_url: https://tools.yosoyfunes.com/
+site_author: Matias Anoniz
+
+repo_name: 'github/yosoyfunes'
+repo_url: 'https://github.com/yosoyfunes/tools.yosoyfunes.com'
+edit_uri: ''
+
+# Main menu
+nav:
+  - Docker: docker.md
+  - Kubernetes: kubernetes.md
+
+use_directory_urls: false
+
+# Uncomment next line to change default (docs) documentation folder
+docs_dir: mkdocs
+
+# Uncomment next line to change default (site) website folder
+site_dir: docs
+
+# Uncomment next line to disable "search" plugin
+#plugins: []
+
+#-------------------------------
+# SITE AND THEME CONFIGURATIONS
+#-------------------------------
+
+# Copyright
+copyright: 'Copyright &copy; 2021 Matias Anoniz'
+
+theme:
+  name: 'material'
+  include_sidebar: true
+  #logo: 'img/logo_white.png'
+  #favicon: 'img/favicon.ico'
+  palette:
+    primary: 'cyan'
+    accent: 'cyan'
+  font:
+    text: 'Ubuntu'
+    code: 'Ubuntu Mono'
+  feature:
+    tabs: false
+
+extra_css:
+  - 'css/extra.css'
+
+extra:
+  social:
+    - type: 'globe'
+      link: 'https://tools.yosoyfunes.com/'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+        linenums: true
