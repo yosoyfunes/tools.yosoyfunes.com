@@ -13,7 +13,7 @@
         <meta name="description" content="tools">
       
       
-        <link rel="canonical" href="https://tools.yosoyfunes.com/index.html">
+        <link rel="canonical" href="https://tools.yosoyfunes.com/docker/run-container.html">
       
       
         <meta name="author" content="Matias Anoniz">
@@ -37,18 +37,18 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
     
     
       
-        <title>yosoyfunes tools</title>
+        <title>Containers - yosoyfunes tools</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
       
-        <link rel="stylesheet" href="assets/stylesheets/application-palette.224b79ff.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
       
       
         
@@ -57,7 +57,7 @@
       
     
     
-      <script src="assets/javascripts/modernizr.1f0bcf2b.js"></script>
+      <script src="../assets/javascripts/modernizr.1f0bcf2b.js"></script>
     
     
       
@@ -66,10 +66,10 @@
         <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
     
-      <link rel="stylesheet" href="css/extra.css">
+      <link rel="stylesheet" href="../css/extra.css">
     
     
       
@@ -110,6 +110,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#how-to-run-container-docker" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -131,7 +135,7 @@
               yosoyfunes tools
             </span>
             <span class="md-header-nav__topic">
-              Home
+              Containers
             </span>
           
         </div>
@@ -239,10 +243,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
     
     <label class="md-nav__link" for="nav-1">
       Docker
@@ -260,7 +266,7 @@
 
 
   <li class="md-nav__item">
-    <a href="docker/install-docker.html" title="Install" class="md-nav__link">
+    <a href="install-docker.html" title="Install" class="md-nav__link">
       Install
     </a>
   </li>
@@ -270,11 +276,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="docker/run-container.html" title="Containers" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="run-container.html" title="Containers" class="md-nav__link md-nav__link--active">
       Containers
     </a>
+    
   </li>
 
         
@@ -284,7 +299,7 @@
 
 
   <li class="md-nav__item">
-    <a href="docker/alpine.html" title="Alpine" class="md-nav__link">
+    <a href="alpine.html" title="Alpine" class="md-nav__link">
       Alpine
     </a>
   </li>
@@ -301,7 +316,7 @@
 
 
   <li class="md-nav__item">
-    <a href="k8s/kubernetes.html" title="Kubernetes" class="md-nav__link">
+    <a href="../k8s/kubernetes.html" title="Kubernetes" class="md-nav__link">
       Kubernetes
     </a>
   </li>
@@ -313,7 +328,7 @@
 
 
   <li class="md-nav__item">
-    <a href="mysql.html" title="MySQL" class="md-nav__link">
+    <a href="../mysql.html" title="MySQL" class="md-nav__link">
       MySQL
     </a>
   </li>
@@ -344,7 +359,7 @@
 
 
   <li class="md-nav__item">
-    <a href="certificate.html" title="Certificates" class="md-nav__link">
+    <a href="../certificate.html" title="Certificates" class="md-nav__link">
       Certificates
     </a>
   </li>
@@ -362,15 +377,68 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Home</h1>
-                
-                <p>@yosoyfunes</p>
+                <h1 id="how-to-run-container-docker">how to run container docker</h1>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker run --rm -ti -v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/app -w /app php:8.0.7-cli-buster bash
+</code></pre></div>
+</td></tr></table>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>Unable to find image <span class="s1">&#39;php:8.0.7-cli-buster&#39;</span> locally
+<span class="m">8</span>.0.7-cli-buster: Pulling from library/php
+69692152171a: Pull <span class="nb">complete</span> 
+2040822db325: Pull <span class="nb">complete</span> 
+9b4ca5ae9dfa: Pull <span class="nb">complete</span> 
+ac1fe7c6d966: Pull <span class="nb">complete</span> 
+7994240c01ee: Pull <span class="nb">complete</span> 
+17d30fab02f4: Pull <span class="nb">complete</span> 
+0e0d506afaf7: Pull <span class="nb">complete</span> 
+dd2edbf3c029: Pull <span class="nb">complete</span> 
+195ee400b641: Pull <span class="nb">complete</span> 
+Digest: sha256:e1ee5a85f9c0f00258559ed806e113dc6f6721ff7d6e6ce35229ebe986aa84c6
+Status: Downloaded newer image <span class="k">for</span> php:8.0.7-cli-buster
+</code></pre></div>
+</td></tr></table>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>php -v
+</code></pre></div>
+</td></tr></table>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>PHP <span class="m">8</span>.0.7 <span class="o">(</span>cli<span class="o">)</span> <span class="o">(</span>built: Jun  <span class="m">4</span> <span class="m">2021</span> <span class="m">18</span>:34:28<span class="o">)</span> <span class="o">(</span> NTS <span class="o">)</span>
+Copyright <span class="o">(</span>c<span class="o">)</span> The PHP Group
+Zend Engine v4.0.7, Copyright <span class="o">(</span>c<span class="o">)</span> Zend Technologies
+</code></pre></div>
+</td></tr></table>
                 
                   
                 
@@ -388,6 +456,41 @@
         
 <footer class="md-footer">
   
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="install-docker.html" title="Install" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Install
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="alpine.html" title="Alpine" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Alpine
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
@@ -404,7 +507,7 @@
       </div>
       
   <div class="md-footer-social">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.css">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     
       <a href="https://tools.yosoyfunes.com/" class="md-footer-social__link fa fa-globe"></a>
     
@@ -416,9 +519,9 @@
       
     </div>
     
-      <script src="assets/javascripts/application.d9aa80ab.js"></script>
+      <script src="../assets/javascripts/application.d9aa80ab.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
     
   </body>

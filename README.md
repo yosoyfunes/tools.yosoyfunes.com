@@ -14,11 +14,13 @@ guidelines.
 Install the latest version of MkDocs and Material with `pip`:
 
 ``` sh
-pip install mkdocs
-```
-
-``` sh
-pip install mkdocs-material
+pip3 install -r requirements.txt
 ```
 
 Finally modify the `mkdocs.yml` with your project information and write your wonderful documentation!
+
+## Start the Server
+
+``` sh
+mkdocs serve
+```

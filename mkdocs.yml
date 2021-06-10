@@ -10,8 +10,14 @@ edit_uri: ''
 
 # Main menu
 nav:
-  - Docker: docker.md
-  - Kubernetes: kubernetes.md
+  - Docker: 
+    - Install: docker/install-docker.md
+    - Containers: docker/run-container.md
+    - Alpine: docker/alpine.md
+  - Kubernetes: k8s/kubernetes.md
+  - MySQL: mysql.md
+  - Linux:
+    - Certificates: certificate.md
 
 use_directory_urls: false
 
