@@ -15,9 +15,9 @@ nav:
     - Containers: docker/run-container.md
     - Alpine: docker/alpine.md
   - Kubernetes: k8s/kubernetes.md
-  - MySQL: mysql.md
   - Linux:
-    - Certificates: certificate.md
+    - Certificates: linux/certificate.md
+    - MySQL: linux/mysql.md
 
 use_directory_urls: false
 
