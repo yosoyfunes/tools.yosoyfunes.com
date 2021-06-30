@@ -394,6 +394,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#minikube-with-k8s" title="minikube with k8s" class="md-nav__link">
+    minikube with k8s
+  </a>
+  
+</li>
+      
       
       
       
@@ -536,6 +543,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#minikube-with-k8s" title="minikube with k8s" class="md-nav__link">
+    minikube with k8s
+  </a>
+  
+</li>
+      
       
       
       
@@ -614,6 +628,18 @@ rm ./get_helm.sh
 <h3 id="multitool">multitool</h3>
 <p><a href="https://github.com/Praqma/Network-MultiTool">https://github.com/Praqma/Network-MultiTool</a></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>kubectl run multitool --image<span class="o">=</span>praqma/network-multitool
+</code></pre></div>
+</td></tr></table>
+<h3 id="minikube-with-k8s">minikube with k8s</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker run --rm -ti --hostname minikube -w /data <span class="se">\</span>
+    --network minikube <span class="se">\</span>
+    -v <span class="nv">$HOME</span>/.minikube:<span class="nv">$HOME</span>/.minikube <span class="se">\</span>
+    -v <span class="nv">$HOME</span>/.kube/:/root/.kube <span class="se">\</span>
+    -v <span class="si">${</span><span class="nv">PWD</span><span class="si">}</span>:/data yosoyfunes/cbff-local
 </code></pre></div>
 </td></tr></table>
                 
