@@ -73,3 +73,13 @@ docker run --rm -ti yosoyfunes/cbff-local
 ```bash
 kubectl run multitool --image=praqma/network-multitool
 ```
+
+### minikube with k8s 
+
+```bash
+docker run --rm -ti --hostname minikube -w /data \
+    --network minikube \
+    -v $HOME/.minikube:$HOME/.minikube \
+    -v $HOME/.kube/:/root/.kube \
+    -v ${PWD}:/data yosoyfunes/cbff-local
+```
